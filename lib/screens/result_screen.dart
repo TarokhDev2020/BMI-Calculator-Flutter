@@ -2,6 +2,7 @@ import 'package:bmi_calculator01/components/bottom_button.dart';
 import 'package:bmi_calculator01/components/reusable_card.dart';
 import 'package:bmi_calculator01/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ResultScreen extends StatelessWidget {
   const ResultScreen({Key? key, required this.bmiResult, required this.resultText, required this.description}) : super(key: key);
@@ -14,6 +15,15 @@ class ResultScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
+        leading: IconButton(
+          icon: const Icon(
+            FontAwesomeIcons.arrowLeft,
+            color: Colors.white,
+          ),
+          iconSize: 20.0,
+          onPressed: () => Navigator.of(context).pop(),
+        ),
         title: const Text("BMI CALCULATOR"),
       ),
       body: Column(

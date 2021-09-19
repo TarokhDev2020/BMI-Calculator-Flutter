@@ -2,6 +2,7 @@ import 'package:bmi_calculator01/calculator.dart';
 import 'package:bmi_calculator01/constants.dart';
 import 'package:bmi_calculator01/screens/result_screen.dart';
 import 'package:flutter/material.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../components/bottom_button.dart';
 import '../components/icon_content.dart';
@@ -30,6 +31,7 @@ class _InputScreenState extends State<InputScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: const Text('BMI CALCULATOR'),
       ),
       body: Column(
