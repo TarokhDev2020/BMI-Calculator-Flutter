@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './screens/input_screen.dart';
 
 void main() => runApp(const BMICalculator());
 
@@ -15,9 +16,9 @@ class BMICalculator extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("BMI Calculator"),
-        ),
-      ),
+          title: const Text("Hello World")
+        )
+      )
     );
   }
 }

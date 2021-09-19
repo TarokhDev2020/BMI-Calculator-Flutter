@@ -1,11 +1,11 @@
+import 'package:bmi_calculator01/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:bmi_calculator/constants.dart';
 
 class IconContent extends StatelessWidget {
-  IconContent({this.icon, this.label});
+  const IconContent({Key? key, this.icon, this.label}) : super(key: key);
 
-  final IconData icon;
-  final String label;
+  final IconData? icon;
+  final String? label;
 
   @override
   Widget build(BuildContext context) {
@@ -16,11 +16,11 @@ class IconContent extends StatelessWidget {
           icon,
           size: 80.0,
         ),
-        SizedBox(
+        const SizedBox(
           height: 15.0,
         ),
         Text(
-          label,
+          label!,
           style: kLabelTextStyle,
         )
       ],
